@@ -1,0 +1,111 @@
+:root
+{
+    --colecriture: brown;
+}
+
+
+
+
+*
+{
+    margin:0;
+    padding:0;
+}
+
+
+
+body
+{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+}
+
+
+.first
+{
+    position:relative;
+    width: 12em;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    align-items: center;
+    padding:2em;
+    font-size:1em;
+    border:0.3em solid rgba(128, 128, 128, 0.616);
+    overflow:hidden;
+    color:var(--colecriture);
+    transition-property: color;
+    transition-duration: 1s;
+    transition-delay: 1s;
+   
+    
+
+}
+
+
+.first::after
+{
+    content: "";
+    position:absolute;
+    width:12em;
+    height: 7em;
+    bottom:0.01em;
+    left: 4em;
+    background-color: brown;
+    transform-origin: right bottom;
+    border:none;
+    transform: rotate(90deg);
+    transition-property:transform border;
+    transition-duration: 2s;
+    z-index: -1;
+    
+}
+
+.first::before
+{
+    content: "";
+    position:absolute;
+    width:12em;
+    height: 7em;
+    left:-0.1em;
+    bottom:0.01em ;
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+    background-color: var(--colecriture);
+    transform-origin: left bottom;
+    border:none;
+    transition-property:transform border ;
+    transition-duration: 2s;
+    z-index: -1;
+
+   
+    
+}
+
+.first:hover::after
+{
+    transform: rotate(0deg);
+    
+     
+}
+
+.first:hover::before
+{
+    transform: rotate(0deg);
+    /* border: 1em solid var(--colecriture); */
+    
+    
+   
+}
+
+.first:hover
+{
+    color:white;
+}
+
+
+
+ 
