@@ -1,0 +1,68 @@
+:root
+{
+    --colorRed: brown;
+}
+
+
+
+*
+{
+    margin:0;
+    padding: 0;
+}
+
+
+body
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50% auto;
+    background-color: black;
+}
+
+div
+{
+    position: relative;
+    height: 5em;
+    width: 7em;
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    border:0.2em solid red;
+    color:red;
+
+}
+div::after
+{
+    content:"Hoverable";
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    height: 9em;
+    width: 7em;
+    align-items: center;
+    text-align: center;
+    background-color: red;
+    /* transform: translate(-70%,-145%); */
+    transform: translate(0%,5%); 
+    border-bottom-right-radius: 35%;
+    border-bottom-left-radius: 35%;
+    transition-property: transform;
+    transition-duration: .5s;
+    color: black;
+
+
+}
+
+
+div:hover::after
+{
+    transform: translate(0%,-100%);
+}
