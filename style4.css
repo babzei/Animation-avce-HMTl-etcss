@@ -1,0 +1,60 @@
+*
+{
+    margin: 0;
+    padding:0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: ;
+}
+
+.first
+{
+    position:;
+    padding:3em;
+    width: 12em;
+    transform: translate(-50%,-50%);
+    background-color:;
+    text-align: center;
+    border:0.5em solid;
+    overflow: hidden;
+
+
+}
+
+
+.first::after
+{
+    content: "COOL !";
+    
+    position:absolute;
+    background-color: brown;
+    bottom:8.3em;
+    right:-0.09em;
+    left: 0.01em;
+    padding:1.2em;
+    font-size:2.5em;
+    font-weight: bold;
+    transition-property: transform;
+    transition-duration: 1s;
+    
+   
+ 
+
+}
+
+
+.first:hover::after
+{
+    transform: translate(0,235%);
+    font-size:2.5em;
+    font-weight: bold;
+   
+    
+    
+}
