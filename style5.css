@@ -1,0 +1,59 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(4, 4, 36);
+    
+  
+
+}
+
+.first
+{
+position:relative;
+top:12em;
+width: 12em;
+color: white;
+text-align: center;
+padding:2em;
+font-size:1em;
+border:0.3em solid #ffff;
+transition-property: background-color;
+transition-duration: 0.8s;
+overflow: hidden;
+
+}
+.first:hover{
+    background-color: red;
+}
+
+.first::after
+{ 
+    content: "";
+    position:absolute;
+    top:2em;
+    right:6em;
+    width: 15em;
+    height: 1em;
+    background-color: white;
+    transform-origin: bottom left;
+    transition-property:transform;
+    transition-duration: .2s;
+    transform: translate(-8em,3em) rotate(50deg);
+
+     
+}  
+
+.first:hover::after
+{
+    transform: translate(18em,-10em) rotate(50deg);
+}
+
+
+   
