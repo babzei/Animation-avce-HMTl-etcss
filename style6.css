@@ -1,0 +1,81 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    background-color: black;
+}
+
+
+.first
+{
+    position:relative;
+    background-color:;
+    transform: translate(50%,100%);
+    padding:2em;
+    transform: translate();
+    overflow: hidden;
+    color: transparent;
+   
+}
+
+
+.first::before
+{
+    content: "HoverBale";
+    position:absolute;
+    padding:2em;
+    background-color: rgb(20, 20, 20);
+    font-size: 1.3em;
+    font-weight: bold;
+    top:0;
+    left:0;
+    transform: translate(0%, 0%);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    color:white;
+  
+
+}
+
+
+
+.first:hover::before
+{
+    transform: translate(100%, -100%);
+}
+
+.first::after
+{
+    content: "Hoverbale";
+    text-align: center;
+    
+    justify-content: ;
+    position:absolute;
+    padding:2em;
+    font-size: 1.3em;
+    font-weight: bold;
+    /* width: 100%;
+    height: 100%; */
+    top:0;
+    left:0;
+    background-color: green;
+    transform: translate(-100%,100% );
+    transition-property: transform;
+    transition-duration: 0.2s;
+    color: white;
+    
+
+}
+
+.first:hover::after
+{
+    transform: translate(0%,0%);
+}
